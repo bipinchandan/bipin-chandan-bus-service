@@ -2,6 +2,11 @@
 .facts a,.email-fallback a{color:inherit;text-decoration:none}
 .btn.email {
   background: #007bff;
+  color: #f59e0b;
+  border: none;
+}
+.btn.black {
+  background: #0d6efd;
   color: #ffffff;
   border: none;
 }

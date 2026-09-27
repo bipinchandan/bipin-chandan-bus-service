@@ -65,10 +65,52 @@
 
 <section id="fleet" class="section dark"><div class="container">
 <p class="eyebrow">OUR FLEET</p><h2>Our Buses</h2><p class="lead">A selection of the buses in our fleet. Photos are displayed as provided.</p>
-<div class="gallery">
-<figure class="large"><img src="images/bus-1.jpeg" alt="Bipin Chandan Bus Service bus photo 1" loading="lazy"></figure><figure class=""><img src="images/bus-2.jpeg" alt="Bipin Chandan Bus Service bus photo 2" loading="lazy"></figure><figure class=""><img src="images/bus-3.jpeg" alt="Bipin Chandan Bus Service bus photo 3" loading="lazy"></figure><figure class=""><img src="images/bus-4.jpeg" alt="Bipin Chandan Bus Service bus photo 4" loading="lazy"></figure><figure class=""><img src="images/bus-5.jpeg" alt="Bipin Chandan Bus Service bus photo 5" loading="lazy"></figure><figure class=""><img src="images/bus-6.jpeg" alt="Bipin Chandan Bus Service bus photo 6" loading="lazy"></figure><figure class=""><img src="images/bus-7.jpeg" alt="Bipin Chandan Bus Service bus photo 7" loading="lazy"></figure><figure class=""><img src="images/bus-8.jpeg" alt="Bipin Chandan Bus Service bus photo 8" loading="lazy"></figure><figure class=""><img src="images/bus-9.jpeg" alt="Bipin Chandan Bus Service bus photo 9" loading="lazy"></figure><figure class=""><img src="images/bus-10.jpeg" alt="Bipin Chandan Bus Service bus photo 10" loading="lazy"></figure><figure class=""><img src="images/bus-11.jpeg" alt="Bipin Chandan Bus Service bus photo 11" loading="lazy"></figure><figure class=""><img src="images/bus-12.jpeg" alt="Bipin Chandan Bus Service bus photo 12" loading="lazy"></figure><figure class=""><img src="images/bus-13.jpeg" alt="Bipin Chandan Bus Service bus photo 13" loading="lazy"></figure><figure class=""><img src="images/bus-14.jpeg" alt="Bipin Chandan Bus Service bus photo 14" loading="lazy"></figure><figure class=""><img src="images/bus-15.jpeg" alt="Bipin Chandan Bus Service bus photo 15" loading="lazy"></figure>
+<div class="gallery-filters">
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="exterior">Exterior</button>
+<button class="filter-btn" data-filter="interior">Interior</button>
 </div>
-</div></section>
+
+<div class="gallery">
+
+<figure class="large" data-category="exterior">
+<img src="images/bus-1.jpeg" alt="Bipin Chandan Bus Service bus photo 1" loading="lazy">
+</figure>
+
+<figure data-category="exterior"><img src="images/bus-2.jpeg" alt="Bus photo 2" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-3.jpeg" alt="Bus photo 3" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-4.jpeg" alt="Bus photo 4" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-5.jpeg" alt="Bus photo 5" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-6.jpeg" alt="Bus photo 6" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-7.jpeg" alt="Bus photo 7" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-8.jpeg" alt="Bus photo 8" loading="lazy"></figure>
+
+<figure data-category="interior"><img src="images/bus-9.jpeg" alt="Bus interior photo 9" loading="lazy"></figure>
+
+<figure data-category="exterior"><img src="images/bus-10.jpeg" alt="Bus photo 10" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-11.jpeg" alt="Bus photo 11" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-12.jpeg" alt="Bus photo 12" loading="lazy"></figure>
+
+<figure data-category="interior"><img src="images/bus-13.jpeg" alt="Bus interior photo 13" loading="lazy"></figure>
+<figure data-category="interior"><img src="images/bus-14.jpeg" alt="Bus interior photo 14" loading="lazy"></figure>
+
+<figure data-category="exterior"><img src="images/bus-15.jpeg" alt="Bus photo 15" loading="lazy"></figure>
+
+<figure data-category="interior"><img src="images/bus-16.jpeg" alt="Bus interior photo 16" loading="lazy"></figure>
+<figure data-category="interior"><img src="images/bus-17.jpeg" alt="Bus interior photo 17" loading="lazy"></figure>
+
+<figure data-category="exterior"><img src="images/bus-18.jpeg" alt="Bus photo 18" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-19.jpeg" alt="Bus photo 19" loading="lazy"></figure>
+<figure data-category="exterior"><img src="images/bus-20.jpeg" alt="Bus photo 20" loading="lazy"></figure>
+
+<figure data-category="interior"><img src="images/bus-21.jpeg" alt="Bus interior photo 21" loading="lazy"></figure>
+<figure data-category="interior"><img src="images/bus-22.jpeg" alt="Bus interior photo 22" loading="lazy"></figure>
+
+<figure data-category="exterior"><img src="images/bus-23.jpeg" alt="Bus photo 23" loading="lazy"></figure>
+
+<figure data-category="interior"><img src="images/bus-24.jpeg" alt="Bus interior photo 24" loading="lazy"></figure>
+
+</div>
 
 <section id="bookings" class="section booking"><div class="container">
 <p class="eyebrow">GROUP &amp; SPECIAL BOOKINGS</p><h2>Bookings for Every Occasion</h2>
@@ -105,3 +147,29 @@
 <div class="buttons"><a class="btn black" href="tel:8521369945">📞 Call 8521369945</a><a class="btn white" target="_blank" href="https://wa.me/918521369945?text=Hello%20BIPIN%20CHANDAN%20BUS%20SERVICE%2C%20I%20want%20to know about your bus service.">WhatsApp</a></div>
 </div></section>
 <footer><div class="container foot"><div><b>BIPIN CHANDAN BUS SERVICE</b><small>Katri Sarai, Nalanda, Bihar</small></div><div>© 2026 BIPIN CHANDAN BUS SERVICE</div></div></footer>
+<footer><div class="container foot"><div><b>BIPIN CHANDAN BUS SERVICE</b><small>Katri Sarai, Nalanda, Bihar</small></div><div>© 2026 BIPIN CHANDAN BUS SERVICE</div></div></footer>
+
+<script>
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery figure");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
+
+    galleryItems.forEach(item => {
+      if (filter === "all" || item.dataset.category === filter) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

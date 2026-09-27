@@ -1,12 +1,11 @@
-BIPIN CHANDAN BUS SERVICE website
-Updated:
-- 1998 establishment
-- 20+ buses
-- AC and Non-AC
-- 24 to 45 seats
-- All 15 supplied bus photos included
-- Group booking section
-- Google Maps business link
-- Logo removed
-Contact: 8521369945
-Location: Katrisarai, Barith, Bihar 805105
+BIPIN CHANDAN BUS SERVICE - UPDATED WEBSITE
+
+Contents:
+- index.html
+- style.css
+- images/ (9 bus photos + new logo = 10 image assets)
+
+The new logo is used in the website header and as the favicon.
+The 9 bus photos replace the previous fleet gallery photos.
+
+For GitHub Pages: upload index.html, style.css and the complete images folder to the repository root.
